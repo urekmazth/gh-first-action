@@ -1,0 +1,16 @@
+name: First Workflow # specify the name of the workflow
+# on is used to specify the event to trigger the workflow
+on: workflow_dispatch # this event allows manual triggering of workflow
+
+# then the jobs in the workflow
+jobs:
+  # first-job here is any name for the job
+  first-job:
+    # then specify the runner as each job runs on a specific environment
+    runs-on: ubuntu-latest
+    # list the steps of the current job
+    steps:
+      - name: Print Greeting
+        run: echo "Hi there!"
+      - name: Print Goodbye
+        run: echo "Farewell, developer"    
